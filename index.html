@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Memory Grid</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <section class="topbar" aria-live="polite">
+        <div>
+          <p class="eyebrow">Color Memory</p>
+          <h1>Match the hidden grid</h1>
+        </div>
+        <div class="timer" id="timer">5</div>
+      </section>
+
+      <section class="game-stage">
+        <div class="board-wrap">
+          <p class="board-label" id="mainBoardLabel">Your grid</p>
+          <div class="grid" id="memoryGrid" aria-label="Memory color grid"></div>
+        </div>
+
+        <div class="answer-wrap" id="answerWrap" hidden>
+          <p class="board-label">Original grid</p>
+          <div class="grid mini-grid" id="answerGrid" aria-label="Original color grid"></div>
+        </div>
+
+        <aside class="palette-panel" aria-label="Color palette">
+          <div class="panel-header">
+            <span id="phaseLabel">Memorize</span>
+            <strong id="scoreLabel">0%</strong>
+          </div>
+          <div class="palette" id="palette"></div>
+          <button class="primary-action" id="submitButton" type="button" disabled>
+            Check
+          </button>
+          <button class="secondary-action" id="newGameButton" type="button">
+            New grid
+          </button>
+        </aside>
+      </section>
+
+      <p class="status" id="statusText">
+        Memorize the nine colors before they disappear.
+      </p>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
